@@ -27,10 +27,10 @@ The model catches 95% of actual fraud cases (recall), which is the right design 
 
 Repository Structure-
 
-1. analysis_model.ipynb          # EDA, preprocessing, training, and evaluation
-2. fraud_detection.py            # Streamlit app for interactive predictions
-3. fraud_detection_model.pkl     # Trained pipeline (preprocessing + logistic regression)
-4. requirements.txt              # Dependencies
+1. analysis_model.ipynb          (EDA, preprocessing, training, and evaluation)
+2. fraud_detection.py            (Streamlit app for interactive predictions)
+3. fraud_detection_model.pkl     (Trained pipeline (preprocessing + logistic regression)
+4. requirements.txt              (Dependencies)
 5. README.md
 
 Running the App Locally-
