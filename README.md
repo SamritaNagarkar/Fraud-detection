@@ -11,11 +11,11 @@ Problem-
 Fraud detection is a classic extreme class-imbalance problem: with fraud cases this rare, a model can score 99%+ accuracy by predicting "not fraud" every time while catching zero actual fraud. The goal here was to build a model that actually identifies fraud, and to evaluate it with metrics that reflect that goal honestly rather than a headline accuracy number.
 
 Approach-
-EDA: Explored transaction type distributions, fraud rate by transaction type, amount distributions, and balance-difference patterns to understand what separates fraudulent from legitimate transactions.
-Feature engineering: Used transaction type, amount, and sender/receiver account balances (before and after the transaction) as model inputs.
-Preprocessing: StandardScaler for numerical features, OneHotEncoder for transaction type, combined via a ColumnTransformer.
+1. EDA: Explored transaction type distributions, fraud rate by transaction type, amount distributions, and balance-difference patterns to understand what separates fraudulent from legitimate transactions.
+2. Feature engineering: Used transaction type, amount, and sender/receiver account balances (before and after the transaction) as model inputs.
+3. Preprocessing: StandardScaler for numerical features, OneHotEncoder for transaction type, combined via a ColumnTransformer.
 Class imbalance: Handled using class_weight='balanced' in LogisticRegression, rather than under/oversampling, to keep the full dataset in play.
-Split: 70/30 train/test split, stratified on the target to preserve the fraud ratio in both sets.
+4. Split: 70/30 train/test split, stratified on the target to preserve the fraud ratio in both sets.
 Deployment: Trained pipeline exported with joblib and served through a Streamlit app for interactive predictions.
 
 
@@ -27,11 +27,11 @@ The model catches 95% of actual fraud cases (recall), which is the right design 
 
 Repository Structure-
 
-├── analysis_model.ipynb          # EDA, preprocessing, training, and evaluation
-├── fraud_detection.py            # Streamlit app for interactive predictions
-├── fraud_detection_model.pkl     # Trained pipeline (preprocessing + logistic regression)
-├── requirements.txt              # Dependencies
-└── README.md
+1. analysis_model.ipynb          # EDA, preprocessing, training, and evaluation
+2. fraud_detection.py            # Streamlit app for interactive predictions
+3. fraud_detection_model.pkl     # Trained pipeline (preprocessing + logistic regression)
+4. requirements.txt              # Dependencies
+5. README.md
 
 Running the App Locally-
 Clone the repository-
